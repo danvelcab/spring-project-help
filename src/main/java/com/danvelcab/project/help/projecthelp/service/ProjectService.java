@@ -6,6 +6,7 @@ import com.danvelcab.project.help.projecthelp.repository.IProject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,8 +16,8 @@ public class ProjectService {
     @Autowired
     private IProject repository;
 
-    public Page<Project> list(Pageable pageable) {
-        return this.repository.findAll(pageable);
+    public Page<Project> list(Specification<Project> specification, Pageable pageable) {
+        return this.repository.findAll(specification, pageable);
     }
 
     public Project save(ProjectForm newProjectForm) {
