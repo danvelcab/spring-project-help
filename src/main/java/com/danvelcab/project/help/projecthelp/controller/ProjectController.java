@@ -4,6 +4,8 @@ import com.danvelcab.project.help.projecthelp.domain.Project;
 import com.danvelcab.project.help.projecthelp.form.ProjectForm;
 import com.danvelcab.project.help.projecthelp.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -17,8 +19,8 @@ public class ProjectController {
     private ProjectService service;
 
     @GetMapping
-    public List<Project> list() {
-        return this.service.list();
+    public Page<Project> list(Pageable pageable) {
+        return this.service.list(pageable);
     }
 
     @PostMapping

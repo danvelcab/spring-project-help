@@ -9,7 +9,7 @@ public class ProjectSeed {
 
 
     public void seedProjectTable(IProject repository) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 50; i++) {
             Project project = new Project();
             project.setName("Project " + i);
             project.setDescription("Description " + i);
