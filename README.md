@@ -7,12 +7,23 @@
 
 ## Requisitos funcionales
 
-### Proyectos
+### Usuario autenticado
+
+#### Proyectos
 - Se debe poder crear / editar proyectos
 - Se debe poder eliminar proyectos
+
+### Usuario no autenticado
+
+#### Usuarios
+- Se debe poder hacer login
+- Se debe poder registrar en el sistema
+
+### Todos los usuarios
+
+#### Proyectos
 - Se debe poder obtener información de un proyecto
 - Se debe poder obtener un listado de los proyectos del sistema. Campo búsqueda por nombre y descripción y filtro por tipo
-
 
 
 
